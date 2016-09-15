@@ -1,6 +1,12 @@
-#include <iostream>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 
-int main() {
-  std::cout << "Hello MingW64!!" << std::endl;
-  return 0;
+int main(int argc, char *argv[])
+{
+    QGuiApplication app(argc, argv);
+
+    QQmlApplicationEngine engine;
+    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+
+    return app.exec();
 }
