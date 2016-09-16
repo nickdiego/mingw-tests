@@ -4,5 +4,5 @@
 *.swp
 *.user
 *.autosave
-build*
+.build*
 .deploy*
